@@ -1,0 +1,18 @@
+{
+    "destinations": [
+        {
+            "id": 1,
+            "name": "Paris, France",
+            "image": "paris.jpg",
+            "shortDescription": "The city of lights and love.",
+            "description": "Explore the romantic city of Paris with its iconic Eiffel Tower, world-class museums, and charming streets."
+        },
+        {
+            "id": 2,
+            "name": "Tokyo, Japan",
+            "image": "tokyo.jpg",
+            "shortDescription": "A bustling metropolis with ancient roots.",
+            "description": "Discover the perfect blend of tradition and modernity in Tokyo, with its stunning temples and cutting-edge technology."
+        }
+    ]
+}

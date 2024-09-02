@@ -1,0 +1,235 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    animation: slideInUp 1s ease-in-out;
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.cta-button {
+    background-color: #004d00; /* Dark Green */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #003300; /* Even Darker Green */
+    transform: scale(1.1);
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+/* Transparent navbar aligned to the right */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Align to the right */
+    min-width: 98%;
+    padding: 20px;
+    display: flex;
+    background: rgba(0, 0, 0, 0); /* Dark transparent background */
+    color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0); /* Border for visibility */
+    z-index: 1000; /* Ensure it is on top */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-brand a {
+    justify-content: flex-start;
+    flex-grow: 4;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Raleway;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 10px; /* Space between links */
+    justify-content: flex-end; /* Align links to the right */
+    flex-grow: 1; /* Allow navbar-links to take up remaining space */
+}
+
+/* Existing styles */
+.navbar-links a {
+    color: white; /* Text color */
+    text-decoration: none; /* No underline */
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 15px; /* Increase padding */
+    border-radius: 5px; /* Rounded corners */
+    border-bottom: 2px solid transparent; /* Border initially invisible */
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #e0e0e0; /* Lighter color on hover */
+    border-bottom-color: #e0e0e0; /* Line color on hover */
+}
+
+
+
+
+/* Highlights Section */
+.highlights-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.highlights-section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.destination-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.about-section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.testimonial-section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #004d00; /* Dark Green */
+    text-align: center;
+    color: white;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.contact-section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+}
+
+.contact-section .cta-button {
+    background-color: #003300; /* Even Darker Green */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #003300; /* Even Darker Green */
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
