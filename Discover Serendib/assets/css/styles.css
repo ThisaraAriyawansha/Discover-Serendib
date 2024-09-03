@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -62,17 +63,10 @@ body {
     display: inline-block;
 }
 
-
 .cta-button1:hover {
     background-color: rgba(255, 255, 255, 0.4); /* Slightly more opaque on hover */
     transform: translateY(-3px); /* Subtle lift effect */
 }
-
-@keyframes bounceIn {
-    from { transform: scale(0.5); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
 
 /* Transparent navbar aligned to the right */
 .navbar {
@@ -136,10 +130,6 @@ body {
     color: #c0c0c0; /* Slightly lighter text color on hover */
 }
 
-
-
-
-
 /* Highlights Section */
 .highlights-section {
     padding: 50px 20px;
@@ -164,8 +154,6 @@ body {
     justify-content: center;
     gap: 20px;
 }
-
-
 
 .destination-card {
     background-color: #f9f9f9;
@@ -198,7 +186,6 @@ body {
     transform: translateY(-10px);
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
-
 
 /* About Section Images */
 .about-images {
@@ -241,7 +228,6 @@ body {
     transform: translateY(-10px);
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
-
 
 /* About Section */
 .about-section {
@@ -303,24 +289,20 @@ body {
     background-color: #f4f4f4; /* Light grey background */
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
-    color: #333; /* Dark grey text color */
 }
 
 .contact-section h2 {
-    font-size: 2.2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #4CAF50; /* Subtle green color for the heading */
 }
 
 .contact-section p {
-    font-size: 1.1em;
-    margin-bottom: 25px;
-    line-height: 1.5;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 40px;
 }
+
 
 .cta-button {
     background-color: #4CAF50; /* Green background for the button */
@@ -340,6 +322,7 @@ body {
 }
 
 
+
 /* Footer */
 footer {
     padding: 20px;
@@ -350,4 +333,82 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 1.2em;
+    }
+
+    .destination-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .about-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img {
+        width: 80%;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-section {
+        padding: 40px 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar-links a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .destination-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-section {
+        padding: 20px 10px;
+    }
 }
