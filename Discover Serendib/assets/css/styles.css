@@ -148,6 +148,43 @@ body {
     gap: 20px;
 }
 
+
+
+.destination-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.destination-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.destination-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.destination-card p {
+    font-size: 1em;
+    color: #333;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
 /* About Section */
 .about-section {
     padding: 50px 20px;
