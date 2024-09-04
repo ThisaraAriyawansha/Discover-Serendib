@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Discover Serendib</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+        /* Basic styles for the contact page */
+        .contact-section {
+            padding: 2rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: #333;
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Modern Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 0.5rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .navbar-brand a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .navbar-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .navbar-links a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar .navbar-links a:hover {
+            background-color: #f1f1f1;
+            color: #007bff;
+        }
+
+        .navbar .navbar-links a.active {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar .navbar-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            .navbar .navbar-links a {
+                margin: 0;
+                padding: 0.5rem;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="index.html">Discover Serendib</a>
+            </div>
+            <div class="navbar-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="destination.html">Destinations</a>
+                <a href="booking.html">Book a Tour</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <form action="submit_form.php" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <p><strong>Email:</strong> contact@discoverserendib.com</p>
+                <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+                <p><strong>Address:</strong> 123 Serendib Street, Colombo, Sri Lanka</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Discover Serendib. All Rights Reserved. | Designed with passion for Sri Lanka</p>
+    </footer>
+</body>
+</html>
