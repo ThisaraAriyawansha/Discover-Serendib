@@ -326,8 +326,8 @@ body {
 /* Footer */
 footer {
     padding: 20px;
-    background-color: #003300; /* Even Darker Green */
-    color: white;
+    background-color: #ffffff; /* Even Darker Green */
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 

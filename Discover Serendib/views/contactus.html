@@ -4,117 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Discover Serendib</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Basic styles for the contact page */
-        .contact-section {
-            padding: 2rem;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-        
-        .contact-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 1rem;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        .contact-form button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        
-        .contact-form button:hover {
-            background-color: #0056b3;
-        }
-        
-        .contact-info {
-            margin-top: 2rem;
-            font-size: 1rem;
+        /* Global Styles */
+        body {
+                font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: url('../assets/images/light-green-colorful-abstract-textured-background-design-photo.jpg') no-repeat center center fixed; /* Background image */
+                background-size: cover; /* Cover the entire screen */
+                color: #333;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+
+        /* Header and Navbar */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             color: #333;
-        }
-        
-        .contact-info p {
-            margin-bottom: 0.5rem;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: fadeInDown 0.5s ease-out;
         }
 
-        /* Modern Navbar Styles */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
-            padding: 0.5rem 2rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .navbar .navbar-brand a {
-            color: #333;
+        .navbar-brand a {
             text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: bold;
+            color: #333;
+            font-size: 1.8rem;
+            font-weight: 700;
+            transition: color 0.3s ease;
         }
 
-        .navbar .navbar-links {
+        .navbar-brand a:hover {
+            color: #007aff; /* iOS blue */
+        }
+
+        .navbar-links {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-links a:hover {
+            color: #007aff; /* iOS blue */
+        }
+
+        /* Main Content */
+        main {
+            padding: 6rem 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+        }
+
+        .contact-section {
+            background: rgba(121, 119, 119, 0); /* Fully transparent background */
+            min-width: 820px;
+            padding: 2.5rem;
+            border-radius: 20px; /* More rounded corners */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .contact-section h2 {
+            font-size: 2.8rem; /* Larger heading */
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #d0d0d5;
+            border-radius: 12px; /* Rounded corners */
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #007aff; /* iOS blue */
+            background-color: #ffffff; /* White background on focus */
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: #007aff; /* iOS blue */
+            color: #fff;
+            border: none;
+            padding: 1.2rem;
+            border-radius: 12px; /* Rounded corners */
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #0051a2; /* Darker blue */
+            transform: scale(1.05);
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-info p {
+            margin: 0;
             display: flex;
             align-items: center;
+            gap: 0.5rem;
         }
 
-        .navbar .navbar-links a {
-            color: #333;
+        .contact-info i {
+            color: #007aff; /* iOS blue */
+            font-size: 1.2rem;
+        }
+
+        /* Map Section */
+        .map {
+            margin: 2rem 0;
+            border: 1px solid #d0d0d5;
+            border-radius: 12px;
+            height: 400px;
+            width: 100%;
+        }
+
+        /* Social Media Section */
+        .social-media {
+            margin: 2rem 0;
+            font-size: 1.2rem;
+        }
+
+        .social-media a {
+            color: #007aff;
             text-decoration: none;
-            margin: 0 1rem;
-            padding: 0.5rem 0.75rem;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
         }
 
-        .navbar .navbar-links a:hover {
-            background-color: #f1f1f1;
-            color: #007bff;
+        .social-media a:hover {
+            color: #0051a2;
         }
 
-        .navbar .navbar-links a.active {
-            color: #007bff;
-            font-weight: bold;
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+            color: #333;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: fadeInUp 0.5s ease-out;
         }
 
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
+        footer p {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+
+        /* Keyframes */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
             }
-            .navbar .navbar-links {
-                flex-direction: column;
-                width: 100%;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-            .navbar .navbar-links a {
-                margin: 0;
-                padding: 0.5rem;
-                width: 100%;
-                text-align: center;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -126,14 +233,14 @@
                 <a href="index.html">Discover Serendib</a>
             </div>
             <div class="navbar-links">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="destination.html">Destinations</a>
                 <a href="booking.html">Book a Tour</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="contactus.html">Contact Us</a>
             </div>
         </nav>
     </header>
-    <main id="main-content">
+    <main>
         <section class="contact-section">
             <h2>Contact Us</h2>
             <div class="contact-form">
@@ -146,9 +253,20 @@
                 </form>
             </div>
             <div class="contact-info">
-                <p><strong>Email:</strong> contact@discoverserendib.com</p>
-                <p><strong>Phone:</strong> +1 (123) 456-7890</p>
-                <p><strong>Address:</strong> 123 Serendib Street, Colombo, Sri Lanka</p>
+                <p><i class="fas fa-envelope"></i><strong>Email:</strong> contact@discoverserendib.com</p>
+                <p><i class="fas fa-phone-alt"></i><strong>Phone:</strong> +1 (123) 456-7890</p>
+                <p><i class="fas fa-map-marker-alt"></i><strong>Address:</strong> 123 Serendib Street, Colombo, Sri Lanka</p>
+            </div>
+            <div class="map">
+                <!-- Replace with an embedded map iframe -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100000!2d79.9584!3d6.9271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259be7d88c013%3A0x501e9d96d405d30!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1612392723115!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="social-media">
+                <p>Follow us on:</p>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </section>
     </main>
