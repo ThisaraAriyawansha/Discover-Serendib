@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Serendib</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+
 </head>
 <body>
     <header>
@@ -14,8 +15,9 @@
             </div>
             <div class="navbar-links">
                 <a href="index.html">Home</a>
-                <a href="destination.html">Destinations</a>
-                <a href="booking.html">Book a Tour</a>
+                <a href="javascript:void(0);" onclick="slowScrollTo('#must-visit-destinations')">Destinations</a>
+                <a href="book.html">Book a Tour</a>
+                <a href="contactus.html">Contact Us</a>
             </div>
         </nav>
     </header>
@@ -25,7 +27,7 @@
             <p>Uncover the hidden treasures and natural wonders of Sri Lanka. Your unforgettable journey begins here.</p>
             <a href="destination.html" class="cta-button1">Explore Now</a>
         </section>
-        <section class="highlights-section">
+        <section id="must-visit-destinations" class="highlights-section">
             <h2>Must-Visit Destinations</h2>
             <div class="destination-cards">
                 <!-- Card 1 -->
@@ -152,5 +154,33 @@
         <p>&copy; 2024 Discover Serendib. All Rights Reserved. | Designed with passion for Sri Lanka</p>
     </footer>
     <script src="../controllers/mainController.js"></script>
+    <script>
+        function slowScrollTo(target) {
+            const element = document.querySelector(target);
+            const headerOffset = 100; // Adjust for any fixed headers
+            const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const duration = 3000; // Duration in milliseconds (adjust for slower speed)
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+    </script>
 </body>
 </html>

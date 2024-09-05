@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Tour | Discover Serendib</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-brand a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #4285f4;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.navbar-links a:hover {
+    color: #4285f4;
+}
+
+.main-content {
+    padding: 60px 20px;
+}
+
+.booking-section {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.booking-section h1 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.booking-section p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #777;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
+.cta-button {
+    width: 100%;
+    background-color: #4285f4;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #357ae8;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #777;
+    border-top: 1px solid #e0e0e0;
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="index.html">Discover Serendib</a>
+            </div>
+            <div class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#must-visit-destinations">Destinations</a>
+                <a href="booking.html">Book a Tour</a>
+                <a href="contactus.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="main-content">
+        <section class="booking-section">
+            <h1>Book Your Tour</h1>
+            <p>Ready to explore the wonders of Sri Lanka? Book your personalized tour with us today.</p>
+            
+            <form class="booking-form" action="submit-booking.php" method="POST">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="destination">Select Destination</label>
+                    <select id="destination" name="destination" required>
+                        <option value="sigiriya">Sigiriya</option>
+                        <option value="ella">Ella</option>
+                        <option value="galle">Galle</option>
+                        <option value="kandy">Kandy</option>
+                        <option value="yala">Yala National Park</option>
+                        <option value="colombo">Colombo</option>
+                        <option value="nuwara-eliya">Nuwara Eliya</option>
+                        <option value="mirissa">Mirissa</option>
+                        <option value="anuradhapura">Anuradhapura</option>
+                        <option value="bentota">Bentota</option>
+                        <option value="trincomalee">Trincomalee</option>
+                        <option value="udawalawe">Udawalawe National Park</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Preferred Tour Date</label>
+                    <input type="date" id="date" name="tour_date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="cta-button">Submit Booking</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Discover Serendib. All Rights Reserved. | Designed with passion for Sri Lanka</p>
+    </footer>
+    
+    <script src="../controllers/mainController.js"></script>
+</body>
+</html>
