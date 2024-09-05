@@ -17,9 +17,9 @@
             </div>
             <div class="navbar-links">
                 <a href="index.html">Home</a>
-                <a href="javascript:void(0);" onclick="slowScrollTo('#must-visit-destinations')">Destinations</a>
+                <a href="javascript:void(0);" onclick="slowScrollTo('#must-visit-destinations', 3000)">Destinations</a>
                 <a href="book.html">Book a Tour</a>
-                <a href="contactus.html">Contact Us</a>
+                <a href="javascript:void(0);" onclick="slowScrollTo('#contact-section', 30000)">Contact Us</a>
             </div>
         </nav>
     </header>
@@ -145,7 +145,7 @@
             </div>
         </section>
         <br/><br/>
-        <section class="contact-section">
+        <section id="contact-section" class="contact-section">
             <h2>Get in Touch</h2>
             <p>Have questions or need assistance? Our team is here to help you plan the perfect trip.</p>
             <a href="contactus.html" class="cta-button">Contact Us</a>
@@ -157,15 +157,15 @@
     </footer>
     <script src="../controllers/mainController.js"></script>
     <script>
-        function slowScrollTo(target) {
+        function slowScrollTo(target, speed) {
             const element = document.querySelector(target);
             const headerOffset = 100; // Adjust for any fixed headers
             const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - headerOffset;
             const startPosition = window.pageYOffset;
             const distance = targetPosition - startPosition;
-            const duration = 3000; // Duration in milliseconds (adjust for slower speed)
+            const duration = speed || 1000; // Default to 1000ms if no speed provided
             let startTime = null;
-
+    
             function animation(currentTime) {
                 if (startTime === null) startTime = currentTime;
                 const timeElapsed = currentTime - startTime;
@@ -173,16 +173,17 @@
                 window.scrollTo(0, run);
                 if (timeElapsed < duration) requestAnimationFrame(animation);
             }
-
+    
             function ease(t, b, c, d) {
                 t /= d / 2;
                 if (t < 1) return c / 2 * t * t + b;
                 t--;
                 return -c / 2 * (t * (t - 2) - 1) + b;
             }
-
+    
             requestAnimationFrame(animation);
         }
     </script>
+    
 </body>
 </html>
